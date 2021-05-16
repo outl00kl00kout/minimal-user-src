@@ -23,5 +23,5 @@ USER ${USER}
 
 RUN git clone https://github.com/NetBSD/src
 RUN (cd src;./build.sh -U -u -j4 -m amd64 -O ~/obj tools)
-RUN (cd src;./build.sh -U -u -j4 -m amd64 -O ~/obj kernel=USERMODE)
+RUN (cd src;./build.sh -U -u -j4 -m amd64 -O ~/obj kernel=GENERIC_USERMODE)
 
