@@ -16,4 +16,5 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
+RUN apt install git
 RUN git checkout https://github.com/NetBSD/src
