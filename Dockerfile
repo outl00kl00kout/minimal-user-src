@@ -10,6 +10,7 @@ ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 # Install things needed for dev.
+RUN apt-get update
 RUN apt-get install git
 
 # User env finalise
