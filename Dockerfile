@@ -9,6 +9,10 @@ ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
+# Install things needed for dev.
+RUN apt-get install git
+
+# User env finalise
 RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
@@ -16,5 +20,4 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-RUN apt-get install git
 RUN git checkout https://github.com/NetBSD/src
