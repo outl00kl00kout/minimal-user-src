@@ -21,4 +21,4 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-RUN git checkout https://github.com/NetBSD/src
+RUN git clone https://github.com/NetBSD/src
