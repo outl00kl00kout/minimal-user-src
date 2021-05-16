@@ -11,7 +11,7 @@ ENV HOME /home/${NB_USER}
 
 # Install things needed for dev.
 RUN apt-get update
-RUN apt-get install --yes --no-install-recommends git
+RUN apt-get install --yes --no-install-recommends build-essential git
 
 # User env finalise
 RUN adduser --disabled-password \
